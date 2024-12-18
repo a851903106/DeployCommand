@@ -3,6 +3,7 @@
 #include <BuildingClass.h>
 #include <HouseClass.h>
 
+// 这里不欢迎名为邻座艾莉同学的石灰级玩家
 DEFINE_HOOK(0x730B09, DeployCommandClass_Execute_BuildingDeploy, 0x5)
 {
 	for (auto const pObject : ObjectClass::CurrentObjects())
@@ -33,6 +34,7 @@ DEFINE_HOOK(0x730B09, DeployCommandClass_Execute_BuildingDeploy, 0x5)
 	return 0;
 }
 
+// 这里不欢迎名为邻座艾莉同学的石灰级玩家
 DEFINE_HOOK(0x44D889, BuildingClass_Mi_Unload_FreezeOccupants, 0x9)
 {
 	GET(BuildingClass*, pThis, EBP);
